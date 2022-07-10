@@ -23,13 +23,15 @@ public class Member {
     private MemberLevel level;
     @Enumerated(EnumType.STRING)
     private MemberStatus status;
+    private String uuid;
 
     @Builder
-    public Member(String email, String username, int age, MemberLevel level, MemberStatus status) {
+    public Member(String email, String username, int age, MemberLevel level, MemberStatus status, String uuid) {
         this.email = email;
         this.username = username;
         this.age = age;
         this.level = level;
         this.status = status;
+        this.uuid = uuid;
     }
 }
