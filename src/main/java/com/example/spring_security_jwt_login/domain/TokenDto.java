@@ -10,8 +10,11 @@ public class TokenDto {
     //refresh 토큰
     private String refreshToken;
 
+    private String grantType;
+
     @Builder
-    public TokenDto(String accessToken, String refreshToken) {
+    public TokenDto(String grantType, String accessToken, String refreshToken) {
+        this.grantType = grantType;
         this.accessToken = accessToken;
         this.refreshToken = refreshToken;
     }
